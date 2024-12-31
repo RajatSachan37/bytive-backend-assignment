@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "80a3f764-6076-4b14-995f-92a5a3eecc0e",
+		"name": "todolist-postman-collection-local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"superuser\",\r\n    \"password\":\"superpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"superuser\",\r\n    \"password\":\"superpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQwMmU1Yjk4ODQ5MDY1Y2ZjMTlkZSIsImlhdCI6MTczNTY1NjM1MiwiZXhwIjoxNzM4MjQ4MzUyfQ.qgX_EUJyoSUqRLgEqmh-ba4j_hduGFB3hjsg81AxnXo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"task3\",\r\n    \"description\": \"description3\",\r\n    \"status\":\"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQwMmU1Yjk4ODQ5MDY1Y2ZjMTlkZSIsImlhdCI6MTczNTY1NjM1MiwiZXhwIjoxNzM4MjQ4MzUyfQ.qgX_EUJyoSUqRLgEqmh-ba4j_hduGFB3hjsg81AxnXo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					]
+				},
+				"description": "Fetch All Tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a task by its ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQwMmU1Yjk4ODQ5MDY1Y2ZjMTlkZSIsImlhdCI6MTczNTY1NjM1MiwiZXhwIjoxNzM4MjQ4MzUyfQ.qgX_EUJyoSUqRLgEqmh-ba4j_hduGFB3hjsg81AxnXo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks/6773f90929679ab0880984d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"6773f90929679ab0880984d2"
+					]
+				},
+				"description": "Fetch All Tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Update the task status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQwMmU1Yjk4ODQ5MDY1Y2ZjMTlkZSIsImlhdCI6MTczNTY1NjM1MiwiZXhwIjoxNzM4MjQ4MzUyfQ.qgX_EUJyoSUqRLgEqmh-ba4j_hduGFB3hjsg81AxnXo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tasks/6773f6cb29679ab0880984c5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"6773f6cb29679ab0880984c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a task by its ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQwMmU1Yjk4ODQ5MDY1Y2ZjMTlkZSIsImlhdCI6MTczNTY1NjM1MiwiZXhwIjoxNzM4MjQ4MzUyfQ.qgX_EUJyoSUqRLgEqmh-ba4j_hduGFB3hjsg81AxnXo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tasks/6774041bb98849065cfc19e4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"6774041bb98849065cfc19e4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

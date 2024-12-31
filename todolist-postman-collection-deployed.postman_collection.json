@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "5d38616e-af11-4c8f-80bd-ce7b2db7056c",
+		"name": "todolist-postman-collection-deployed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"superuser\",\r\n    \"password\":\"superpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todolist-api-deploy.onrender.com/auth/signup",
+					"protocol": "https",
+					"host": [
+						"todolist-api-deploy",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"superuser\",\r\n    \"password\":\"superpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todolist-api-deploy.onrender.com/auth/login",
+					"protocol": "https",
+					"host": [
+						"todolist-api-deploy",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQxZDNkYTgxOTZmMmZjMjZlZWE4MSIsImlhdCI6MTczNTY2Mjk1NiwiZXhwIjoxNzM4MjU0OTU2fQ.M5NcAV4KAlszizxV0oZZu9CXnCVTWnVJsFljGOXwm9E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"task3\",\r\n    \"description\": \"description3\",\r\n    \"status\":\"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todolist-api-deploy.onrender.com/tasks",
+					"protocol": "https",
+					"host": [
+						"todolist-api-deploy",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQxZDNkYTgxOTZmMmZjMjZlZWE4MSIsImlhdCI6MTczNTY2Mjk1NiwiZXhwIjoxNzM4MjU0OTU2fQ.M5NcAV4KAlszizxV0oZZu9CXnCVTWnVJsFljGOXwm9E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://todolist-api-deploy.onrender.com/tasks",
+					"protocol": "https",
+					"host": [
+						"todolist-api-deploy",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"tasks"
+					]
+				},
+				"description": "Fetch All Tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a task by its ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQxZDNkYTgxOTZmMmZjMjZlZWE4MSIsImlhdCI6MTczNTY2Mjk1NiwiZXhwIjoxNzM4MjU0OTU2fQ.M5NcAV4KAlszizxV0oZZu9CXnCVTWnVJsFljGOXwm9E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://todolist-api-deploy.onrender.com/tasks/67741d99a8196f2fc26eea84",
+					"protocol": "https",
+					"host": [
+						"todolist-api-deploy",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"tasks",
+						"67741d99a8196f2fc26eea84"
+					]
+				},
+				"description": "Fetch All Tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Update the task status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQxZDNkYTgxOTZmMmZjMjZlZWE4MSIsImlhdCI6MTczNTY2Mjk1NiwiZXhwIjoxNzM4MjU0OTU2fQ.M5NcAV4KAlszizxV0oZZu9CXnCVTWnVJsFljGOXwm9E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://todolist-api-deploy.onrender.com/tasks/67741d99a8196f2fc26eea84",
+					"protocol": "https",
+					"host": [
+						"todolist-api-deploy",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"tasks",
+						"67741d99a8196f2fc26eea84"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a task by its ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NzQxZDNkYTgxOTZmMmZjMjZlZWE4MSIsImlhdCI6MTczNTY2Mjk1NiwiZXhwIjoxNzM4MjU0OTU2fQ.M5NcAV4KAlszizxV0oZZu9CXnCVTWnVJsFljGOXwm9E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://todolist-api-deploy.onrender.com/tasks/67741d99a8196f2fc26eea84",
+					"protocol": "https",
+					"host": [
+						"todolist-api-deploy",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"tasks",
+						"67741d99a8196f2fc26eea84"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
